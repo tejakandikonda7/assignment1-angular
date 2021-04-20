@@ -1,0 +1,67 @@
+<main>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-xs-12 br1">
+            <div style="padding: 15px;">
+              <highcharts-chart [Highcharts] = "highcharts"  [options] = "chartOptions">
+              </highcharts-chart>
+            </div>
+          
+          </div>
+          <div class="col-md-6 col-xs-12">
+              <div class="row br2">
+                  <div class="col-md-12 col-xs-12" style="height: 300px;">
+                    <h1 style="padding-top: 30px;">{{avgValue}} %&nbsp;<i style="color: red;" class="fa fa-long-arrow-up" aria-hidden="true"></i></h1>
+                  </div>
+                  
+              </div>
+              <!-- <div class="row">
+                <div class="col-md-12 col-xs-12 mx-2" style="height: 300px;">
+                    <div class="row">
+                      <div class="col-md-8 col-xs-12">Name:</div>
+                      <div class="col-md-8 col-xs-12">Username</div>
+                      <div class="col-md-8 col-xs-12">Email</div>
+                    </div>
+                </div>
+              </div> -->
+              <div class="row br3">
+                <div  class="col-md-2" style="text-align: center;">
+                  <i class="fa fa-user" aria-hidden="true" style="font-size: 100px;"></i>
+                </div>
+                  <div class="col-md-6" style="border-left:black;float: right;">
+                    <div class="col-md-4 col-xs-12">Name:</div>
+                    <div class="col-md-4 col-xs-12">Username</div>
+                    <div class="col-md-4 col-xs-12">Email</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row my-3">
+          <div class="col-md-12 col-xs-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sno</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Pincode</th>
+                  <th scope="col">Company Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of taskData">
+                  <th>{{data.id}}</th>
+                  <td>{{data.name}}</td>
+                  <td>{{data.username}}</td>
+                  <td>{{data.address.city}}</td>
+                  <td>{{data.address.zipcode}}</td>
+                  <td>{{data.company.name}}</td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+      </div>
+  </div>
+</main>
